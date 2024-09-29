@@ -24,7 +24,7 @@ group_list = [("random", uru.get_random_clusters),("butina", uru.get_butina_clus
 result_df = uru.cross_validate(df,model_list,y,group_list)
 ```
 
-The notebook **analyze_crossval.ipynb** reads a file output by run_benchmark.py, makes several useful plots and uses [Tukey's Honestly Signficant Difference (HSD) Test](https://en.wikipedia.org/wiki/Tukey%27s_range_test) to invalidate the null hypothesis that the means of the methods are the same. 
+The notebook **analyze_crossval.ipynb** reads a file output by **run_benchmark.py**, makes several useful plots, and uses [Tukey's Honestly Signficant Difference (HSD) Test](https://en.wikipedia.org/wiki/Tukey%27s_range_test) to invalidate the null hypothesis that the means of the methods are the same. 
 
 
 
