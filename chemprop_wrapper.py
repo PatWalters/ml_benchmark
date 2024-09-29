@@ -1,6 +1,9 @@
+#!/usr/bin/env python
+
 import tempfile
 import subprocess
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 class ChemPropWrapper:
     def __init__(self, y_name):
@@ -23,3 +26,14 @@ class ChemPropWrapper:
             # read the results
             result_df = pd.read_csv(outfile_name)
             return result_df.pred_0.values
+
+def main():
+    df = pd.read_csv("https://raw.githubusercontent.com/PatWalters/datafiles/refs/heads/main/biogen_logS.csv")
+    train, test = train_test_split(df)
+    chemprop_wrapper = ChemPropWrapper("logS")
+    pred = chemprop_wrapper.validate(train, test)
+    print(pred)
+
+if __name__ == "__main__":
+    main()
+        
