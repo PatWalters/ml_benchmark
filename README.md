@@ -1,6 +1,6 @@
 # ml_benchmark
 
-A set of routines for benchmarking ML methods in drug discovery. The script **run_benchmark.py** can be used to run benchmarks.  All that is necessary for the script is a wrapper class that wraps an ML model and supports a **validate** method. The wrapper class is instantiated with the name of column to be predicted.  The validate method takes dataframes containing training and test sets as input and returns a list of predicted values for the test set. For examples of wrapper classes see **chemprop_wrapper.py** and **lgbm_wrapper.py**. 
+A set of routines for benchmarking ML methods in drug discovery. The script **run_benchmark.py** can be used to run benchmarks.  All that is necessary for the script is a wrapper class that wraps an ML model and supports a **validate** method. The wrapper class is instantiated with the name of column to be predicted.  The validate method takes dataframes containing training and test sets as input and returns a list of predicted values for the test set. For examples of wrapper classes see **chemprop_wrapper.py** and **lgbm_wrapper.py**. If the ML method requires a validation set, this can be created inside the wrapper by further splitting the training set. 
 
 ```python
 df = pd.read_csv("myfile.csv")
