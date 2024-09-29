@@ -11,10 +11,10 @@ pred = chemprop_wrapper.validate(train, test)
 
 The **cross_validate** method in **run_benchmark.py** comes from the [useful_rdkit_utils](https://github.com/PatWalters/useful_rdkit_utils).  The **cross_validate** function has four required arguments.
 
--**df** - a dataframe with a SMILES column
--**model_list** - a list of tuples containing the model name and the wrapper class described above
--**y_col** - the name of the column with the y value to be predicted
--**group_list** - a list of group_names and group memberships (e.g. cluster ids), these can be calculated using the functions get_random_clusters, get_scaffold_clusters, get_butina_clusters, and get_umap_clusters in useful_rkdkit_utils.
+- **df** - a dataframe with a SMILES column  
+- **model_list** - a list of tuples containing the model name and the wrapper class described above  
+- **y_col** - the name of the column with the y value to be predicted  
+- **group_list** - a list of group_names and group memberships (e.g. cluster ids), these can be calculated using the functions get_random_clusters, get_scaffold_clusters, get_butina_clusters, and get_umap_clusters in useful_rkdkit_utils.  
 
 
 
