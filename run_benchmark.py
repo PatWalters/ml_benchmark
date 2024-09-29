@@ -7,6 +7,7 @@ import useful_rdkit_utils as uru
 
 def main():
     ds = po.load_dataset("polaris/adme-fang-1")
+    # for simplicity, only use the Polaris solubility dataset
     y_list = [x for x in ds.columns if x.startswith("LOG_SOL")]
     for y in y_list:
         # get the dataframe from the Polaris dataset
